@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="iconmaros.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemerintahan Desa Pucak</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e9f5f5;
+        }
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            max-width: 80%;
+            margin: auto;
+            overflow: auto;
+        }
+        .image {
+            width: 360px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .description {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+            transition: color 0.3s;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .container:hover .description {
+            color: #333;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        .modal-content {
+            margin: 5% auto;
+            display: block;
+            width: 60%;
+            max-width: 2500px;
+            overflow-y: auto;
+            max-height: 80%;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: zoomIn 0.6s;
+        }
+        @keyframes zoomIn {
+            from {transform: scale(0.8);}
+            to {transform: scale(1);}
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #2c3e50;">Struktur Pemerintahan Desa Pucak</h1>
+        <img src="bagan.jpg" alt="Deskripsi Gambar" class="image" id="myImg">
+        <div class="description">
+            <h2 style="color: #16a085;">Struktur Organisasi Desa</h2>
+
+            <h3 style="color: #2980b9;">Abdul Razak - Kepala Desa</h3>
+            <p>Pemimpin utama desa yang berada di puncak struktur organisasi. Sebagai Kepala Desa, Beliau bertanggung jawab atas keseluruhan administrasi desa, pengambilan keputusan strategis, dan koordinasi antara dusun-dusun yang ada di bawah kepemimpinannya.</p>
+
+            <h3 style="color: #2980b9;">Andi Ahmad Sutami - Kepala Dusun Puncak</h3>
+            <p>Pemimpin Dusun Puncak dan bertanggung jawab untuk mengawasi serta mengkoordinasi semua kegiatan di dusunnya. Dia bertanggung jawab kepada Kepala Desa dan memastikan semua program serta kebijakan desa diterapkan dengan baik di Dusun Puncak. Di bawah kepemimpinannya, Dusun Puncak terdiri dari beberapa RT yang masing-masing dipimpin oleh Ketua RT:</p>
+            <ul>
+                <li><strong>Sabang Dg. Beta - Ketua RT 01:</strong> Bertanggung jawab atas urusan administratif dan kesejahteraan warga di RT 01.</li>
+                <li><strong>Usman - Ketua RT 02:</strong> Memimpin dan mengelola kegiatan di RT 02.</li>
+                <li><strong>Massa Dg. Rani - Ketua RT 03:</strong> Mengawasi dan mengkoordinasi kegiatan di RT 03.</li>
+                <li><strong>Risal - Ketua RT 04:</strong> Mengelola dan memastikan kesejahteraan warga di RT 04.</li>
+                <li><strong>Sawedi - Ketua RT 05:</strong> Bertanggung jawab atas administrasi dan kegiatan warga di RT 05.</li>
+            </ul>
+
+            <h3 style="color: #2980b9;">Irwan Hidayat - Kepala Dusun Bontosunggu</h3>
+            <p>Pemimpin Dusun Bontosunggu. Dia mengawasi pelaksanaan program desa dan memastikan koordinasi yang baik antara Ketua RT di dusunnya. Dusun Bontosunggu terdiri dari:</p>
+            <ul>
+                <li><strong>Suardi - Ketua RT 01:</strong> Mengelola kegiatan dan administrasi di RT 01.</li>
+                <li><strong>Calle - Ketua RT 02:</strong> Bertanggung jawab atas kesejahteraan dan kegiatan di RT 02.</li>
+                <li><strong>Abd Rahman - Ketua RT 03:</strong> Mengawasi kegiatan dan urusan administratif di RT 03.</li>
+                <li><strong>Ali Sau - Ketua RT 04:</strong> Mengelola kegiatan dan kesejahteraan warga di RT 04.</li>
+            </ul>
+
+            <h3 style="color: #2980b9;">Muh. Fahri Wadji - Kepala Dusun Pangembang</h3>
+            <p>Pemimpin Dusun Pangembang dengan tanggung jawab untuk mengkoordinasikan seluruh kegiatan dusun serta memastikan kebijakan desa dijalankan dengan baik. Di bawah kepemimpinannya, Dusun Pangembang terdiri dari:</p>
+            <ul>
+                <li><strong>Caddi - Ketua RT 01:</strong> Bertanggung jawab atas kegiatan dan kesejahteraan warga di RT 01.</li>
+                <li><strong>Ilyas - Ketua RT 02:</strong> Mengelola dan mengawasi kegiatan di RT 02.</li>
+                <li><strong>Sajeng - Ketua RT 03:</strong> Memastikan administrasi dan kesejahteraan warga di RT 03.</li>
+            </ul>
+
+            <h3 style="color: #2980b9;">Abd Rahman - Kepala Dusun Batu lotong</h3>
+            <p>Pemimpin Dusun Batu lotong dan memastikan seluruh kegiatan di dusunnya berjalan sesuai dengan kebijakan desa. Dusun Batu lotong terdiri dari:</p>
+            <ul>
+                <li><strong>Sulaeman - Ketua RT 01:</strong> Mengelola kegiatan dan kesejahteraan warga di RT 01.</li>
+                <li><strong>Risal - Ketua RT 02:</strong> Bertanggung jawab atas administrasi dan kesejahteraan di RT 02.</li>
+                <li><strong>Umar - Ketua RT 03:</strong> Mengawasi kegiatan dan urusan administratif di RT 03.</li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <!-- Modal --> 
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="img01" style="width: 100%; height: auto;">
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var span = document.getElementsByClassName("close")[0];
+
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
+</body>
+</html>
